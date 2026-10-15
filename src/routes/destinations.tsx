@@ -1,0 +1,5 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { MarketingLayout } from "@/components/MarketingLayout";
+import { DestinationsSection, SignupSection } from "@/components/MarketingSections";
+export const Route = createFileRoute("/destinations")({ head: () => ({ meta: [{ title: "Destinations et tarifs — Serva Call" },{ name: "description", content: "Consultez les destinations et tarifs indicatifs des appels Serva Call." },{ property: "og:title", content: "Destinations — Serva Call" },{ property: "og:description", content: "Retrouvez les pays disponibles et leurs tarifs de démonstration." },{ property: "og:type", content: "website" },{ name: "twitter:card", content: "summary_large_image" }] }), component: DestinationsPage });
+function DestinationsPage() { return <MarketingLayout><div className="page-intro"><p className="eyebrow">SERVA CALL</p><h1>Destinations & tarifs</h1><p>Un numéro suffit pour retrouver les voix qui comptent.</p></div><DestinationsSection full/><SignupSection/></MarketingLayout>; }

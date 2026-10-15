@@ -1,0 +1,5 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { MarketingLayout } from "@/components/MarketingLayout";
+import { ServicesSection, HowSection, SignupSection } from "@/components/MarketingSections";
+export const Route = createFileRoute("/services")({ head: () => ({ meta: [{ title: "Appels et messages vocaux — Serva Call" },{ name: "description", content: "Découvrez les appels vers GSM, les messages vocaux et la synthèse vocale Serva Call." },{ property: "og:title", content: "Nos services — Serva Call" },{ property: "og:description", content: "Trois façons de retrouver vos proches par téléphone." },{ property: "og:type", content: "website" },{ name: "twitter:card", content: "summary_large_image" }] }), component: ServicesPage });
+function ServicesPage() { return <MarketingLayout><div className="page-intro"><p className="eyebrow">SERVA CALL</p><h1>Nos services</h1><p>Une conversation, un message, une attention. Gardez le lien.</p></div><ServicesSection/><HowSection/><SignupSection/></MarketingLayout>; }
